@@ -34,3 +34,4 @@ Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->na
 Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
